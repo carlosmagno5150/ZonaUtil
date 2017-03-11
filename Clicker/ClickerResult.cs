@@ -1,4 +1,4 @@
-﻿namespace GpSystem.Domain.Validation
+﻿namespace ObserverPattern.Clicker
 {
 	public enum ClickerResult
 	{

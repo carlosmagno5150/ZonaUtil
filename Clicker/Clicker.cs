@@ -1,13 +1,28 @@
 ﻿using System;
 
-namespace GpSystem.Domain.Validation
+namespace ObserverPattern.Clicker
 {
 	public class Clicker
 	{		
 		private readonly Func<bool> _handleTry;
 		private readonly Action<Exception> _handleException;
 
-		public Clicker(Action<Exception> handleException, Func<bool> handleTry)
+		private Action _onSuccess;
+		private Action _onFail;
+
+		public Clicker SetOnSuccess(Action onSuccess)
+		{
+			_onSuccess = onSuccess;
+			return this;
+		}
+
+		public Clicker SetOnFail(Action onFail)
+		{
+			_onFail = onFail;
+			return this;			
+		}
+
+		public Clicker(Func<bool> handleTry, Action<Exception> handleException = null)
 		{
 			_handleException = handleException;
 			_handleTry = handleTry;			
@@ -17,7 +32,16 @@ namespace GpSystem.Domain.Validation
 		{
 			try
 			{
-				return _handleTry.Invoke() ? ClickerResult.Sucesso : ClickerResult.NaoTerminado;
+				if (_handleTry.Invoke())
+				{
+					_onSuccess?.Invoke();
+					return ClickerResult.Sucesso;
+				}
+				else
+				{
+					_onFail?.Invoke();
+					return ClickerResult.NaoTerminado;
+				}
 			}
 			catch (Exception ex)
 			{
