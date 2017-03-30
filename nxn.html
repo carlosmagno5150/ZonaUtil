@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="AppCadastro">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title> NXNCad </title>
+
+	<!-- Bootstrap -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+					<li ui-sref-active="active"><a ui-sref="about">About</a></li>
+					<li ui-sref-active="active"><a ui-sref="wi">WorkItens</a></li>
+					<li ui-sref-active="active"><a ui-sref="release">Release</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<br><br><br /><br><br><br />
+	<style>
+		.row label small {
+			color: gray;
+		}
+	</style>
+	<div class="container" ng-controller="InfoController">
+
+		<div class="row">
+			<div class="col-md-8">
+				<label for="txtNome">Nome Completo<small> (Sem abrevia&ccedil;&atilde;o)</small></label>
+				<input type="text" id="txtNome" ng-model="info.nome" class="form-control" placeholder="Full Name" />
+			</div>
+			<div class="col-md-4">
+				<label for="txtCpf">CPF</label>
+				<input type="text" id="txtCpf" ng-model="info.cpf" class="form-control" placeholder="Individual Taxpayer Identification Number"
+				/>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-2">
+				<label for="txtDtNascimento">Data de Nascimento</label>
+				<input type="text" id="txtDtNascimento" ng-model="info.dataNascimento" class="form-control" placeholder="DD/MM/YYYY" />
+			</div>
+			<div class="col-md-2">
+				<label>Sexo</label>
+				<div class="radio">
+					<label>
+						<input type="radio" name="optionsRadios" id="rbM" value="M">
+						Masculino
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" name="optionsRadios" id="rbF" value="F">
+						Feminino
+					</label>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<label for="txtNatural">Naturalidade<small> (Cidade)</small></label>
+				<input type="text" id="txtNatural" class="form-control" ng-model="info.nacionalidade" />
+			</div>
+			<div class="col-md-4">
+				<label for="txtNacional">Nacionalidade<small> (Pa&iacute;s)</small></label>
+				<input type="text" id="txtNacional" class="form-control" ng-model="info.naturalidade" />
+			</div>
+			<br />
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-3">
+				<label for="ddlTipoId">Tipo de Documento de Indentifica&ccedil;&atilde;o</label>
+				<select id="ddlTipoId" class="form-control" ng-model="info.docTipo"></select>
+			</div>
+			<div class="col-md-3">
+				<label for="txtNumeroId">N&uacute;mero de Identifica&ccedil;&atilde;o</label>
+				<input type="text" id="txtNumeroId" ng-model="info.docNumero" class="form-control" />
+			</div>
+			<div class="col-md-3">
+				<label for="ddlOrgaoId">Org&atilde;o Expedidor</label>
+				<input type="text" id="ddlOrgaoId" ng-model="info.docOrgaoExpedidor" class="form-control" />
+			</div>
+			<div class="col-md-3">
+				<label for="txtDtId">Data de Epedi&ccedil;&atilde;o</label>
+				<input type="text" id="txtDtId" ng-model="info.docDataExpedicao" class="form-control" />
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<label for="txtNomeMae">Nome da M&atilde;e</label>
+				<input type="text" id="txtDtId" ng-model="info.nomeMae" class="form-control" />
+			</div>
+			<div class="col-md-6">
+				<label for="txtNomePai">Nome do Pai</label>
+				<input type="text" id="txtDtId" ng-model="info.nomePai" class="form-control" />
+			</div>
+		</div>
+
+		{{info}}
+	</div>
+
+
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/angular.min.js"></script>
+	<script src="angularModule.js"></script>
+	<!--<script src="assets/js/angular-ui-router.min.js"></script>
+	<script src="assets/customjs/app.js"></script>
+	<script src="assets/customjs/controllers.js"></script>-->
+
+
+
+</body>
+
+</html>
