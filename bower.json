@@ -1,0 +1,94 @@
+{
+  "name": "asdf-ui",
+  "version": "0.0.1",
+  "description": "asdft",
+  "main": [
+    "asdfasdf"
+  ],
+  "keywords": [
+    "asd",
+    "asdfasdf-ui"
+  ],
+  "authors": [
+    "asdf"
+  ],
+  "dependencies": {
+    "angular": "1.4.8",
+    "angular-agility": "~0.8.21",
+    "angular-animate": "1.4.8",
+    "angular-bootstrap": "~0.14.3",
+    "angular-cookies": "1.4.8",
+    "angular-css-injector": "~1.4.0",
+    "angular-resource": "1.4.8",
+    "angular-route": "1.4.8",
+    "angular-sanitize": "1.4.8",
+    "angular-touch": "1.4.8",
+    "angular-ui-grid": "3.1.1",
+    "angular-ui-router": "=0.2.15",
+    "angular-ui-select": "~0.13.2",
+    "angularjs-dropdown-multiselect": "~1.5.2",
+    "angular-timer": "1.3.1",
+    "bootstrap": "~3.3.0",
+    "bootstrap-less": "~3.3.0",
+    "bootstrap-ui-datetime-picker": "~2.0.4",
+    "es5-shim": "~4.3.1",
+    "highcharts": "4.2.6",
+    "highcharts-ng": "~0.0.7",
+    "jquery": "~2.1.4",
+    "jquery-mousewheel": "~3.1.12",
+    "json3": "~3.3.1",
+    "modernizr": "~3.2.0",
+    "moment": "~2.10.6",
+    "ng-table": "~0.3.3",
+    
+    "respond": "~1.4.2",
+    "spin.js": "~2.3.2",
+    "d3": "~3.5.12",
+    "topojson": "~0.0.34",
+    "d3-geo-projection": "~0.2.16",
+    "ui-router-extras": "~0.0.11",
+    
+    "angular-ui-tree": "~2.13.0",
+    "angular-timeline": "~1.6.1",
+    "textAngular": "~1.5.0",
+    "ng-tags-input": "~3.0.0",
+    "moment-timezone": "~0.5.4",
+    "jstzdetect": "~1.0.6",
+    "ng-device-detector": "^3.0.1" 
+  },
+  "devDependencies": {
+    "angular-mocks": "1.4.8",
+    "angular-scenario": "1.4.8",
+    "jasmine-expect": "~1.22.2"
+  },
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "test/",
+    "tests/",
+    "mocks/",
+    ".jshintrc"
+  ],
+  "resolutions": {
+    "moment": "~2.10.6",
+    "angular": "~1.4.0",
+    "angular-bootstrap": "~0.14.3",
+    "angular-css-injector": "~1.4.0",
+    "angular-route": "1.4.8",
+    "jquery": "~2.1.4",
+    "modernizr": "~3.2.0",
+    "nxn-css": "0.2.15",
+    "angular-sanitize": "1.4.8",
+    "spin.js": "2.0.1",
+    "bootstrap": "~3.3.0",
+    "angular-animate": "1.4.8",
+    "angular-cookies": "1.4.8",
+    "angular-resource": "1.4.8",
+    "angular-touch": "1.4.8",
+    "highcharts-release": "4.1.8",
+    "nxn-ui": "0.6.10",
+    "visualizations": "0.0.98",
+    "angular-ui-grid": "3.1.1",
+    "bootstrap-daterangepicker": "1.3.19"
+  }
+}
